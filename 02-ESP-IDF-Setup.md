@@ -340,7 +340,7 @@ sudo chmod 666 /dev/ttyUSB0
 idf_component_register(
     SRCS "main.c"
     INCLUDE_DIRS "."
-    REQUIRES esp_wifi esp_now nvs_flash
+    REQUIRES esp_wifi nvs_flash
 )
 ```
 
@@ -409,7 +409,7 @@ idf.py -p <PORT> flash monitor
 **วิธีแก้:**
 ```cmake
 # เพิ่มใน main/CMakeLists.txt
-REQUIRES esp_wifi esp_now nvs_flash
+REQUIRES esp_wifi nvs_flash
 ```
 
 #### 2. Flash Error: "Serial port not found"
